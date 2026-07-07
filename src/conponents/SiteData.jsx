@@ -7,7 +7,7 @@ const SiteData = ({ props,
     return (
         <article className="flex items-center w-full rounded-2xl border border-white/10 bg-slate-950/70 p-2 sm:p-3">
             <div className="flex items-center w-full flex-col gap-2 px-1 sm:gap-3 sm:flex-row sm:items-start sm:justify-between">
-                <div className='flex flex-col md:flex-row min-w-0 gap-3 sm:gap-4 sm:pl-1'>
+                <div className='flex w-full flex-col md:flex-row min-w-0 gap-3 sm:gap-4 sm:pl-1'>
 
                     <div className='flex  justify-between   gap-2'>
                         <a href={props.site.startsWith("http") ? props.site : `https://${props.site}`} target='_blank' rel='noreferrer'> <h3 className="break-words text-base font-semibold text-white">{props.site}</h3></a>
