@@ -6,7 +6,7 @@ const SiteData = ({ props,
     copyText }) => {
     return (
         <article className="flex items-center w-full rounded-2xl border border-white/10 bg-slate-950/70 p-2 sm:p-3">
-            <div className="flex w-full flex-col gap-2 px-1 sm:gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div className="flex items-center w-full flex-col gap-2 px-1 sm:gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div className='flex flex-col md:flex-row min-w-0 gap-3 sm:gap-4 sm:pl-1'>
 
                     <div className='flex  justify-between   gap-2'>
@@ -46,13 +46,13 @@ const SiteData = ({ props,
 
                     <button onClick={handleEdit} name={props.id}
                         type="button"
-                        className="rounded-xl border border-rose-400/20 bg-rose-500/10 px-3 py-2 text-xs font-medium text-rose-200 transition hover:bg-rose-500/20"
+                        className="rounded-xl border border-rose-400/20 bg-rose-500/10 px-3 py-1 text-xs font-medium text-rose-200 transition hover:bg-rose-500/20"
                     >
                         edit
                     </button>
                     <button onClick={handleDelete} name={props.id}
                         type="button"
-                        className="rounded-xl border border-rose-400/20 bg-rose-500/10 px-3 py-2 text-xs font-medium text-rose-200 transition hover:bg-rose-500/20"
+                        className="rounded-xl border border-rose-400/20 bg-rose-500/10 px-2 py-1 text-xs font-medium text-rose-200 transition hover:bg-rose-500/20"
                     >
                         Delete
                     </button>
