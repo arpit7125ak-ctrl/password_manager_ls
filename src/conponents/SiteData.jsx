@@ -5,8 +5,8 @@ const SiteData = ({ props,
     handleDelete,
     copyText }) => {
     return (
-        <article className="rounded-2xl border border-white/10 bg-slate-950/70 p-2 sm:p-3">
-            <div className="flex flex-col gap-2 px-1 sm:gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <article className="flex items-center w-full rounded-2xl border border-white/10 bg-slate-950/70 p-2 sm:p-3">
+            <div className="flex w-full flex-col gap-2 px-1 sm:gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div className='flex flex-col md:flex-row min-w-0 gap-3 sm:gap-4 sm:pl-1'>
 
                     <div className='flex  justify-between   gap-2'>
@@ -32,7 +32,7 @@ const SiteData = ({ props,
                     </div>
                     <div className='flex gap-2 justify-between  md:flex-row'>
 
-                        <p className="break-all font-mono text-sm text-violet-200">
+                        <p className="break-all flex items-center font-mono text-sm text-violet-200">
                             {"*".repeat(props.password.length)}                    </p>
                         <button
                             type="button" onClick={() => copyText(props.password)}
