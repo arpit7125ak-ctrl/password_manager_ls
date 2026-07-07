@@ -7,31 +7,36 @@ import Navbar from './conponents/Navbar'
 import Manager from './conponents/Manager'
 import NotUser from './conponents/notUser'
 import Login from './conponents/Login'
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
   const [count, setCount] = useState(0)
   const [isValidUser, setisValidUser] = useState(false)
-  const [login, setlogin] = useState({user:"" , password:""})
+  const [login, setlogin] = useState({ user: "", password: "" })
   const [falseuser, setfalseuser] = useState(false)
-  const handleloginchange = (e) =>{
-    setlogin({...login , [e.target.name]:e.target.value})
+  const handleloginchange = (e) => {
+    setlogin({ ...login, [e.target.name]: e.target.value })
   }
-  const handlelogin = (e) =>{
+  const handlelogin = (e) => {
     let logininfo = localStorage.getItem("logininfo")
     // console.log(login)
     // console.log(logininfo)
-    if (!logininfo){
+    if ( !login.user || !login.password) {
+      toast.error("Please fill all fields");
+      return;
+    }
+    if (!logininfo) {
       localStorage.setItem("logininfo", JSON.stringify(login))
       setisValidUser(true)
     }
-    else{
-      const userSaved= JSON.parse(logininfo)
-      const validate= ((userSaved.user===login.user)&&(userSaved.password===login.password))
+    else {
+      const userSaved = JSON.parse(logininfo)
+      const validate = ((userSaved.user === login.user) && (userSaved.password === login.password))
       console.log(validate)
-      if (validate){
+      if (validate) {
         setisValidUser(validate)
       }
-      else{
+      else {
         setfalseuser(true)
       }
     }
@@ -40,8 +45,22 @@ function App() {
   return (
     <>
       {/* <Navbar/> */}
+      <ToastContainer
+                      position="top-right"
+                      autoClose={5000}
+                      hideProgressBar={false}
+                      newestOnTop={false}
+                      closeOnClick={false}
+                      rtl={false}
+                      pauseOnFocusLoss
+                      draggable
+                      pauseOnHover
+                      theme="dark"
       
-     {isValidUser?<Manager />:<Login login={login} handleloginchange={handleloginchange} handlelogin={handlelogin} falseuser={falseuser} />}
+      
+                  />
+
+      {isValidUser ? <Manager /> : <Login login={login} handleloginchange={handleloginchange} handlelogin={handlelogin} falseuser={falseuser} />}
     </>
   )
 }
