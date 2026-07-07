@@ -167,7 +167,7 @@ const Manager = () => {
 
             />
 
-            <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-10 sm:px-6 lg:px-8">
+            <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-4 px-3 py-5 sm:gap-5 sm:px-4 md:px-6 lg:px-8">
                 {/* <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
                     {stats.map((stat) => (
                         <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg shadow-black/10 backdrop-blur">
@@ -177,73 +177,73 @@ const Manager = () => {
                     ))}
                 </div> */}
 
-                <div className=" flex flex-col gap-6">
-                    <div className="rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl shadow-black/20 backdrop-blur">
-                        <div className="mb-6">
-                            <p className="text-sm font-medium uppercase tracking-[0.3em] text-violet-300">
+                <div className="flex flex-col gap-4 sm:gap-5">
+                    <div className="rounded-2xl sm:rounded-3xl border border-white/10 bg-slate-900/80 p-3 sm:p-4 shadow-2xl shadow-black/20 backdrop-blur">
+                        <div className="mb-3 sm:mb-4">
+                            <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.3em] text-violet-300">
                                 Password manager
                             </p>
-                            <h2 className="mt-2 text-3xl font-bold text-white sm:text-4xl">
+                            <h2 className="mt-1 sm:mt-2 text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
                                 Store and organize credentials in one place.
                             </h2>
-                            <span className="mt-3 max-w-2xl text-sm leading-6 text-slate-400 sm:text-base">
+                            <span className="mt-2 sm:mt-3 max-w-2xl text-xs sm:text-sm lg:text-base leading-4 sm:leading-6 text-slate-400">
                                 Create secure passwords, save login details, and keep your important
                                 accounts ready to copy whenever you need them.
                             </span>
                         </div>
 
-                        <form className="space-y-4">
-                            <div className="grid gap-4 md:grid-cols-2">
+                        <form className="space-y-2 sm:space-y-3">
+                            <div className="grid gap-2 sm:gap-3 md:grid-cols-2">
                                 <input value={form.site} onChange={handleChange} name='site'
                                     placeholder="Website / App name"
-                                    className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
+                                    className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-3 py-2 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
                                 />
                                 <input value={form.userName} onChange={handleChange} name='userName'
                                     placeholder="Username / Email"
-                                    className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
+                                    className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-3 py-2 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
                                 />
                             </div>
 
-                            <div className=" flex gap-5 ">
+                            <div className="flex flex-col sm:flex-row gap-2">
                                 <input value={form.password} onChange={handleChange} name='password'
                                     type={isShow ? "text" : "password"}
                                     placeholder="Password"
-                                    className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
+                                    className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-3 py-2 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
                                 />
-                                <button type='button' onClick={toogleShow} className="rounded-2xl border border-violet-400/40 bg-violet-500/20 px-5 py-3 text-sm font-medium text-violet-100 transition hover:bg-violet-500/30">
+                                <button type='button' onClick={toogleShow} className="rounded-2xl border border-violet-400/40 bg-violet-500/20 px-4 py-2 text-sm font-medium text-violet-100 transition hover:bg-violet-500/30 whitespace-nowrap">
                                     show
                                 </button>
 
                                 <button type="button" onClick={handleGenerate}
-                                    className="rounded-2xl border border-violet-400/40 bg-violet-500/20 px-5 py-3 text-sm font-medium text-violet-100 transition hover:bg-violet-500/30">
+                                    className="rounded-2xl border border-violet-400/40 bg-violet-500/20 px-4 py-2 text-sm font-medium text-violet-100 transition hover:bg-violet-500/30 whitespace-nowrap">
                                     Generate
                                 </button>
                             </div>
 
-                            <div className="flex flex-wrap gap-3">
-                                <button onClick={savePassword} type="button" className="rounded-2xl bg-linear-to-r from-violet-500 to-fuchsia-500 px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.01]">
+                            <div className="flex flex-col sm:flex-row gap-2 pt-1">
+                                <button onClick={savePassword} type="button" className="rounded-2xl bg-linear-to-r from-violet-500 to-fuchsia-500 px-4 py-2 text-sm font-semibold text-white transition hover:scale-[1.01] w-full sm:w-auto">
                                     Save password
                                 </button>
-                                <button type="button" onClick={handleClear} className="rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/10">
+                                <button type="button" onClick={handleClear} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200 transition hover:bg-white/10 w-full sm:w-auto">
                                     Clear
                                 </button>
                             </div>
                         </form>
                     </div>
 
-                    <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/20 backdrop-blur">
-                        <div className="mb-5 flex items-center justify-between gap-3">
+                    <div className="rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5 p-3 sm:p-4 shadow-2xl shadow-black/20 backdrop-blur">
+                        <div className="mb-3 sm:mb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">
                             <div>
-                                <h2 className="text-xl font-semibold text-white">Saved credentials</h2>
-                                <p className="mt-1 text-sm text-slate-400">Copy or remove entries anytime.</p>
+                                <h2 className="text-lg sm:text-xl font-semibold text-white">Saved credentials</h2>
+                                <p className="mt-1 text-xs sm:text-sm text-slate-400">Copy or remove entries anytime.</p>
                             </div>
-                            <div className="rounded-full border border-violet-400/30 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-200">
+                            <div className="rounded-full border border-violet-400/30 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-200 whitespace-nowrap">
                                 {passwordArray.length} items
                             </div>
                         </div>
 
-                        <div className="space-y-3">
-                            {passwordArray.length === 0 && <div className="rounded-2xl border border-dashed border-white/10 bg-slate-950/50 p-8 text-center text-sm text-slate-400">
+                        <div className="space-y-2 sm:space-y-3">
+                            {passwordArray.length === 0 && <div className="rounded-2xl border border-dashed border-white/10 bg-slate-950/50 p-4 sm:p-6 text-center text-xs sm:text-sm text-slate-400">
                                 No saved passwords yet. Add your first entry on the left.
                             </div>}
 

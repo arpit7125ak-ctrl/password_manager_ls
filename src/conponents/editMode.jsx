@@ -8,24 +8,24 @@ const EditMode = ({
     
     }) => {
     return (
-        <article className="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <article className="rounded-2xl border border-white/10 bg-slate-950/70 p-2 sm:p-3">
+            <div className="flex flex-col gap-2 sm:gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div className='flex flex-col min-w-0  gap-3 sm:pl-1 md:flex-row md:flex-wrap'>
                     <input value={editform.site} name='site' onChange={handleEditChange} 
                         placeholder="Website / App name"
-                        className=" rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
+                        className="rounded-2xl border border-white/10 bg-slate-950/70 px-3 py-2 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
                     />
                     <input value={editform.userName} name='userName' onChange={handleEditChange}
                         placeholder="Username / Email"
-                        className=" rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
+                        className="rounded-2xl border border-white/10 bg-slate-950/70 px-3 py-2 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
                     />
                     <input value={editform.password} name='password'  onChange={handleEditChange}
                         type={"text"}
                         placeholder="Password"
-                        className=" rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
+                        className="rounded-2xl border border-white/10 bg-slate-950/70 px-3 py-2 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
                     />
                     <button type="button" onClick={handleEditGenerate}
-                                    className="w-full rounded-2xl border border-violet-400/40 bg-violet-500/20 px-5 py-3 text-sm font-medium text-violet-100 transition hover:bg-violet-500/30 md:w-auto">
+                                    className="w-full rounded-2xl border border-violet-400/40 bg-violet-500/20 px-4 py-2 text-sm font-medium text-violet-100 transition hover:bg-violet-500/30 md:w-auto">
                                     Generate
                                 </button>
                 </div>
