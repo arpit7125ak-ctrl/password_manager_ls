@@ -11,7 +11,7 @@ const SiteData = ({ props,
                     <a href={props.site.startsWith("http") ? props.site : `https://${props.site}`} target='_blank' rel='noreferrer'> <h3 className="break-words text-base font-semibold text-white">{props.site}</h3></a>
                     <p className="text-sm text-slate-400 break-words">{props.userName}</p>
                     <p className="break-all font-mono text-sm text-violet-200">
-                        {props.password}
+                        {"*".repeat(props.password.length)}
                         
                     </p>
                 </div>
@@ -50,7 +50,7 @@ const SiteData = ({ props,
                     className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium text-slate-200 transition hover:bg-white/10"
                 >
                     Copy password
-                </button> {props.id}
+                </button> 
 
             </div>
         </article>
