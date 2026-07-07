@@ -10,7 +10,7 @@ const EditMode = ({
     return (
         <article className="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                <div className='flex flex-col min-w-0 flex-col gap-3 sm:pl-1 md:flex-row md:flex-wrap'>
+                <div className='flex  min-w-0  gap-3 sm:pl-1 md:flex-row md:flex-wrap'>
                     <input value={editform.site} name='site' onChange={handleEditChange} 
                         placeholder="Website / App name"
                         className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400"
