@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+
 import './App.css'
-import Navbar from './conponents/Navbar'
+
 import Manager from './conponents/Manager'
-import NotUser from './conponents/notUser'
+
 import Login from './conponents/Login'
 import { ToastContainer, toast } from 'react-toastify';
 

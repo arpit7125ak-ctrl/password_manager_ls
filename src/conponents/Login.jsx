@@ -14,7 +14,9 @@ const Login = ({login,handleloginchange ,handlelogin ,falseuser }) => {
       
       <button onClick={handlelogin} className="mt-1 rounded-2xl border border-violet-400/40 bg-violet-500/20 px-4 py-2 text-sm font-medium text-violet-100 transition hover:bg-violet-500/30">{localStorage.getItem("logininfo")?"login":"save user"}</button>
     </div>
-    {falseuser && <div className="rounded-2xl border border-rose-400/20 bg-rose-500/10 px-3 py-2 text-sm text-rose-200">chal bhag yahan se dusro ka password dekhne aata h </div> }
+    {falseuser && <div className="rounded-2xl border border-rose-400/20 bg-rose-500/10 px-3 py-2 text-sm text-rose-200"> 
+    {/* chal bhag yahan se dusro ka password dekhne aata h */}
+    Is this actually your account, or are you just guessing? </div> }
     </div>
     </div>
     </section>
